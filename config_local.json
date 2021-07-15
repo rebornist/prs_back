@@ -1,0 +1,41 @@
+{
+  "database": {
+    "host": "192.168.0.5",
+    "port": "5432",
+    "name": "sen_db",
+    "user": "withus",
+    "password": "Tjdtks@1607"
+  },
+  "jwt_token": {
+    "access_private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDSp/nsQPYL3lvFrWeRU2omBt6Z9e4zC0UNNEB8b1fv4/s6z7Jw\nVNXI91LLmOWQbd48meKOz2tofJh+Z4+JVPRTAd9GST4S2lnRyXsmbdW+7sMvLnm8\nkDqeS9fRimL6FHtnw8J4/4yhVVlOvVhdEEb4QdcBCVQpYapFK6E3PdHvYQIDAQAB\nAoGBAMPcVm0pgRtL5TwInFDso7czj+jKVmyzP8KlIIgR5ksvR7lIv3neBt/RxPNz\n942v+X+S/KkXhaAiqI5ur3BawsZyW2Zvkkt7y4es5oQHR3VsirzUa82xtYmclBlF\n1BfUGTqu3veSLUAZ3IxPsLU4XBaQQDJRYgs3eZAg2JgjKZ4BAkEA9gZlut+/CNoF\nBBPuRuMzsonvWYKX4ao04i5IjsIItFtLJnuHsRnbJw6c41c+Y7czdZrXVRUkabXN\nQVqF7F9U0QJBANsyeFXd4+eV0RaUS4d8fmVrqsy4SJAQ7m7J/H4sUTBTzy0a0ayr\nwCSkl7xJ6mFv/Inta52GMdtf6c0mYXpx1ZECQDszSuNu168vlylmCl4wac46dsfZ\nLub0aAlNDdScSC/uD+VQsFQjXqLFV2c1JSQlf1J7Ufl9PufZAW0KdVNtlSECQQCP\n4EPeUMQMOWlBwdsFtnCcj5xPvdJbRdHLRKeIBfzQlOJS/9yK0z1Oj/7M51OB22jO\n+9j8T54gGYe0UbIAFgIRAkEAjfA22DMcsRz4cLVrTIjzU+oRGAvw76Yy4ChnNjKb\nWS8QefPIqTmHy3/2w2DuyemWUvcq4k3+XJQwJP6KEOTKnw==\n-----END RSA PRIVATE KEY-----\n",
+    "access_public_key": "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSp/nsQPYL3lvFrWeRU2omBt6Z\n9e4zC0UNNEB8b1fv4/s6z7JwVNXI91LLmOWQbd48meKOz2tofJh+Z4+JVPRTAd9G\nST4S2lnRyXsmbdW+7sMvLnm8kDqeS9fRimL6FHtnw8J4/4yhVVlOvVhdEEb4QdcB\nCVQpYapFK6E3PdHvYQIDAQAB\n-----END PUBLIC KEY-----\n",
+    "refresh_private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQC0YjVV57ghcgF7tiZYtdi231LPnhTvteqrl4WRVqBAobM16bV5\n1b2QAoa5rJznwnwodv1stGXIARywAlA0LDkS2ZR7TcilbRYI0w1wwsVBejGCUPfz\nmryb//Wdn9Q6wCiYFHX6mhaAj7VBfrGa/t6sFpHlzUyELCbCa25EiIVdowIDAQAB\nAoGASt13xW+mvDrU4sN2ptrSVxPZCtJRXiviedUpWmjZmfmCp52X9DkBtANYZzd8\n57OQVDsOc09r7taHUYWkRAMWrEi946RTtEOszahu9FGnOygssQJyl6Ii6R8h2uqZ\nte57UCNsXX1DD+g8Gabl0eXem7d0qzlxYfkMAz8sE3KuZAECQQDvC8bAP8Ej94jl\naLMU2qgsvpQYqgGlKAulDUfm7/5jevoyiELWqRSt4X3uMXM36t3B+c8mnjNz3GNP\nfu2WV6VpAkEAwS1VDx8/n4v2/oqRs64+M8ZrqwTQooHI9QGwj2+s7MeH6JZeOS6n\nG4pCVN9lG213YktDZMFVI63LbWjW9SxNKwJBAMR/ebEutyVJpU5u8kaCNxwQzMw5\nc4C/mlLix+gd/47m2CQRvl+WPVlxsoLKQ1wDxKZfItkr0j+7Oiduvv6GrYECQFQN\nCFxrCUC/InnACwM2BiR66e/gSXLbq3dHA+509bWUX4MIofiZXuYxswjApnpXl8Ex\n5CHbqNK8VK3HFvhYDT8CQQDZdc55apA6dwNIgp6xWub7nZRUsI7BR+TwyMMlpZ0d\nQXfmUTLwoYIL9F8mbG+f1S6FoKkKA8Vswc8Jgt9SMp/0\n-----END RSA PRIVATE KEY-----\n",
+    "refresh_public_key": "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0YjVV57ghcgF7tiZYtdi231LP\nnhTvteqrl4WRVqBAobM16bV51b2QAoa5rJznwnwodv1stGXIARywAlA0LDkS2ZR7\nTcilbRYI0w1wwsVBejGCUPfzmryb//Wdn9Q6wCiYFHX6mhaAj7VBfrGa/t6sFpHl\nzUyELCbCa25EiIVdowIDAQAB\n-----END PUBLIC KEY-----\n"
+  },
+  "letsencrypt": {
+    "dir": "/etc/letsencrypt/live/www.hanbitchurch.kr",
+    "cert": "fullchain.pem",
+    "key": "privkey.pem"
+  },
+  "baseDir": "/home/ec2-user/go/src/hanbit",
+  "media": "C:/Users/saint/OneDrive/dev/backend/hanbit/media/hanbit/media",
+  "oauth_naver": {
+    "naver_login_client_id": "4Hms3F0VBX0uvqakH9xu",
+    "naver_login_client_secret": "gOfe2RUqUQ",
+    "naver_get_token_uri": "https://nid.naver.com/oauth2.0/token",
+    "naver_get_user_uri": "https://openapi.naver.com/v1/nid/me"
+  },
+  "oauth_kakao": {
+    "kakao_login_client_id": "e3ec9cf860043f6b37c6ebaa4eedb15b",
+    "kakao_login_client_secret": "Ltj3nNphyGTgCdkvEPtEa1h2CIjOmkt1",
+    "kakao_get_token_uri": "https://kauth.kakao.com/oauth/token",
+    "kakao_get_user_uri": "https://kapi.kakao.com//v2/user/me"
+  },
+  "oauth_aws": {
+    "aws_login_client_id": "671ge7vr0tru8vnqpqdqack8da",
+    "aws_login_client_secret": "1efgttvau4fik9k7aaidncvipau721rdk472n2kv0igh1nj7pjs9",
+    "aws_get_token_uri": "https://hanbitchurch.auth.ap-northeast-2.amazoncognito.com/oauth2/userInfo",
+    "aws_get_user_uri": "https://hanbitchurch.auth.ap-northeast-2.amazoncognito.com/oauth2/userInfo"
+  },
+  "private_key": "VslhcGYbCnRu8U"
+}
