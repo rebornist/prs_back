@@ -1,6 +1,6 @@
 {
   "database": {
-    "host": "192.168.0.5",
+    "host": "192.168.160.5",
     "port": "5432",
     "name": "sen_db",
     "user": "withus",

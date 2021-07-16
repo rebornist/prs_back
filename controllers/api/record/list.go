@@ -3,7 +3,6 @@ package record
 import (
 	"fmt"
 	"net/http"
-	"prs/controllers/common"
 	"prs/middlewares"
 	"prs/models"
 	"strconv"
@@ -34,12 +33,12 @@ func ListView(c echo.Context) error {
 
 	orderBy := "folder_id, record_id, title"
 
-	userInfo, _ := common.CheckStatus(c, db)
-	uid, err := common.Unsigning(userInfo.UID)
-	if err != nil {
-		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
-		return c.JSON(http.StatusInternalServerError, err)
-	}
+	// userInfo, _ := common.CheckStatus(c, db)
+	// _, err := common.Unsigning(userInfo.UID)
+	// if err != nil {
+	// 	middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
+	// 	return c.JSON(http.StatusInternalServerError, err)
+	// }
 
 	if c.QueryParam("title") != "" {
 		params = append(params, fmt.Sprintf("record-title=%s", c.QueryParam("title")))
@@ -101,7 +100,7 @@ func ListView(c echo.Context) error {
 	} else {
 		offset = (int(page) - 1) * pageNumber
 	}
-	if err := db.Table("records").Where("user_id = ?", uid).Count(&cnt).Error; err != nil {
+	if err := db.Table("records").Where("complate = ?", 1).Count(&cnt).Error; err != nil {
 		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
 		return c.JSON(http.StatusInternalServerError, err)
 	}

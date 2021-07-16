@@ -5,7 +5,7 @@ import "time"
 type Opin struct {
 	RecordId        string    `json:"record_id"`
 	FileId          string    `json:"file_id"`
-	Filename        string    `json:"file_nm"`
+	FileNm          string    `json:"file_nm"`
 	NlpId           string    `json:"nlp_id"`
 	RecordTitle     string    `json:"record_title"`
 	Title           string    `json:"title"`

@@ -3,7 +3,6 @@ package file
 import (
 	"fmt"
 	"net/http"
-	"prs/controllers/common"
 	"prs/middlewares"
 	"prs/models"
 
@@ -22,10 +21,10 @@ func DetailView(c echo.Context) error {
 	fileId := c.Param("file_id")
 	recordId := c.Param("record_id")
 
-	if _, err := common.CheckStatus(c, db); err != nil {
-		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
-		return c.JSON(http.StatusInternalServerError, err)
-	}
+	// if _, err := common.CheckStatus(c, db); err != nil {
+	// 	middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
+	// 	return c.JSON(http.StatusInternalServerError, err)
+	// }
 
 	csrf, err := c.Cookie("_csrf")
 	if err != nil {
@@ -37,6 +36,7 @@ func DetailView(c echo.Context) error {
 		if err := db.
 			Table("opins").
 			Order("file_id").
+			Where("record_id = ? ", recordId).
 			First(&opin).Error; err != nil {
 			middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
 			return c.JSON(http.StatusInternalServerError, err)
