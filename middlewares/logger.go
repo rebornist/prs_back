@@ -78,6 +78,8 @@ func LogrusLogger() echo.MiddlewareFunc {
 
 func CreateLogger(db *gorm.DB, logger *logrus.Entry, status int, err error) {
 
+	logNew := logrus.New()
+
 	// Log as JSON instead of the default ASCII formatter.
 	logrus.SetFormatter(&logrus.JSONFormatter{})
 
@@ -117,5 +119,17 @@ func CreateLogger(db *gorm.DB, logger *logrus.Entry, status int, err error) {
 		log.Info("")
 	}
 
-	db.Create(&logConf)
+	// The API for setting attributes is a little different than the package level
+	// exported logger. See Godoc.
+	logNew.Out = os.Stdout
+
+	// You could set this to any `io.Writer` such as a file
+	file, err := os.OpenFile(fmt.Sprintf("log/log_%s.log", time.Now().Format("Mon Jan 2 15:04:05 -0700 MST 2006")), os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err == nil {
+		logNew.Out = file
+	} else {
+		log.Info("Failed to log to file, using default stderr")
+	}
+
+	// db.Create(&logConf)
 }
