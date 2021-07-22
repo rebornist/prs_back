@@ -44,15 +44,10 @@ func OpinUpdate(c echo.Context) error {
 		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
 		return c.JSON(http.StatusInternalServerError, err)
 	}
-	complate, err := strconv.ParseInt(c.FormValue("complate"), 10, 64)
-	if err != nil {
-		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
-		return c.JSON(http.StatusInternalServerError, err)
-	}
 
 	opin.DocType = uint8(docType)
 	opin.Permission = uint8(permission)
-	opin.Complate = uint8(complate)
+	opin.Complate = 1
 	opin.UpdatedAt = time.Now()
 
 	fileId := c.Param("file_id")
@@ -63,6 +58,11 @@ func OpinUpdate(c echo.Context) error {
 		Order("file_id").
 		Where("file_id = ? ", fileId).
 		Save(&opin).Error; err != nil {
+		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
+		return c.JSON(http.StatusInternalServerError, err)
+	}
+
+	if err := db.Table("records").Where("record_id = ?", opin.RecordId).Update("complate", 2).Error; err != nil {
 		middlewares.CreateLogger(db, logger, http.StatusInternalServerError, err)
 		return c.JSON(http.StatusInternalServerError, err)
 	}

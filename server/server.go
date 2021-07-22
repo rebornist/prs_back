@@ -27,8 +27,12 @@ func main() {
 	e.Use(middleware.Secure())
 	e.Use(middlewares.DbContext(db))
 	e.Use(middlewares.LogrusLogger())
+	e.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{
+		TokenLookup: "header:X-XSRF-TOKEN",
+		CookiePath:  "/",
+	}))
 
 	api.AppRouter(e)
 
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start(":1323"))
 }
