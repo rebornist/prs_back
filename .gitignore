@@ -25,3 +25,8 @@
 # etc
 .eslintcache
 yarn-error.log
+*.json
+*.xlsx
+*.xls
+*.tsv
+*.csv
